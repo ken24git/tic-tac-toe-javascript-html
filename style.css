@@ -1,0 +1,61 @@
+*, *::after, *::before {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 100%;
+}
+
+button:hover, .square:hover {
+    cursor: pointer;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.title {
+    font-size: clamp(3rem, 1rem + 10vw ,6rem);
+}
+
+/* grid is used to position the squares in a 3x3 format */
+.game-table {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    width: clamp(8.5rem, 9rem + 10vw, 17rem);
+    height: clamp(8.5rem, 9rem  + 10vw, 17rem);
+    background-color: white;
+}
+
+/* flex is used to center the X or O in the square */
+.square {
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Nunito", sans-serif;
+    font-size: clamp(1rem, 2rem + 2vw, 3.5rem);
+}
+
+.game-state {
+    font-size: clamp(0.9rem, 1.5rem + 2vw, 2rem);
+}
+
+.restart-btn {
+    font-size: clamp(0.9rem, 1.5rem + 2vw, 2rem);
+    width: 10rem;
+    height: 3rem;
+    border-radius: 0.7rem;
+    background-color: black;
+    color: white;
+}
